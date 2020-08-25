@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+2020.8.25
+p1.navicat连接mysql数据库报错2003
+原因：mysql安装后没有进行正确配置。
+解决方法：找到mysql的安装路径，在这下面新建my.ini文件输入
+————————————————————————————————————————————————————————————————————
+[mysql]
 
-You can use the [editor on GitHub](https://github.com/looiker/Arraylist-problem-/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# 设置mysql客户端默认字符集
+default-character-set=utf8 
+[mysqld]
+#设置3306端口
+port = 3306 
+# 设置mysql的安装目录
+basedir=D:\\mysql
+# 允许最大连接数
+max_connections=200
+# 服务端使用的字符集默认为8比特编码的latin1字符集
+character-set-server=utf8
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+——————————————————————————————————————————————————————————————————————
+以管理员身份打开cmd，找到MySQL安装目录的bin内部，输入指令
+mysqld  --initialize-insecure //为了在目录中增加data文件夹，手动添加data会失败
+net start mysql               //启动服务器
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/looiker/Arraylist-problem-/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+大功告成~
