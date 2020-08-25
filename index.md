@@ -1,22 +1,22 @@
 2020.8.25
 p1.navicat连接mysql数据库报错2003
 原因：mysql安装后没有进行正确配置。
-解决方法：找到mysql的安装路径，在这下面新建my.ini文件输入
+# 解决方法：找到mysql的安装路径，在这下面新建my.ini文件输入
 
 [mysql]
 
-# 设置mysql客户端默认字符集
+#设置mysql客户端默认字符集
 default-character-set=utf8 
 [mysqld]
 #设置3306端口
 port = 3306 
-# 设置mysql的安装目录
+#设置mysql的安装目录
 basedir=D:\\mysql
-# 允许最大连接数
+#允许最大连接数
 max_connections=200
-# 服务端使用的字符集默认为8比特编码的latin1字符集
+#服务端使用的字符集默认为8比特编码的latin1字符集
 character-set-server=utf8
-# 创建新表时将使用的默认存储引擎
+#创建新表时将使用的默认存储引擎
 default-storage-engine=INNODB
 
 
