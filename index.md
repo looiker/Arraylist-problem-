@@ -1,6 +1,6 @@
-#p1.navicat连接mysql数据库报错2003
-原因：mysql安装后没有进行正确配置。
-# 解决方法：找到mysql的安装路径，在这下面新建my.ini文件输入
+# p1.navicat连接mysql数据库报错2003
+###原因：mysql安装后没有进行正确配置。
+## 解决方法：找到mysql的安装路径，在这下面新建my.ini文件输入
 
 [mysql]
 
