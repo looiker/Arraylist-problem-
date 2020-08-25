@@ -1,5 +1,4 @@
-2020.8.25
-p1.navicat连接mysql数据库报错2003
+#p1.navicat连接mysql数据库报错2003
 原因：mysql安装后没有进行正确配置。
 # 解决方法：找到mysql的安装路径，在这下面新建my.ini文件输入
 
@@ -9,6 +8,7 @@ p1.navicat连接mysql数据库报错2003
 default-character-set=utf8 
 
 [mysqld]
+
 #设置3306端口
 port = 3306
 
@@ -27,7 +27,9 @@ default-storage-engine=INNODB
 
 
 以管理员身份打开cmd，找到MySQL安装目录的bin内部，输入指令
+
 mysqld  --initialize-insecure //为了在目录中增加data文件夹，手动添加data会失败
+
 net start mysql               //启动服务器
 
 大功告成~
